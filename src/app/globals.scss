@@ -1,0 +1,62 @@
+
+@import "../styles/variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap');
+
+:root {
+  scroll-behavior: "smooth";
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  font-family: "Inter", sans-serif !important;
+}
+
+body {
+  color: black;
+  background: white;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  // &:hover {
+  //   text-decoration: underline;
+  //   color: $color-primary;
+  // }
+}
+
+p {
+  line-height: 1.5;
+}
+
+// Ant Design
+.ant-form-item-explain-error {
+  margin-top: 2px;
+  font-size: 12px;
+}
+
+// React Toastify
+.Toastify__toast {
+  border-radius: $border-radius !important;
+  padding: 10px 15px !important;
+  font-family: "Inter", sans-serif !important;
+  font-size: 14px !important;
+}
+
+.Toastify__toast-container {
+  padding: 10px 15px !important;
+  width: 420px !important;
+}
+
+.Toastify__toast-body {
+  gap: 10px;
+  line-height: 1.4;
+}

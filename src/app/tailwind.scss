@@ -1,0 +1,193 @@
+
+// tailwind.scss
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+//Loader Spin
+@keyframes spin {
+    0% {
+        width: 50px;
+    }
+    25% {
+        width: 50px;
+        transform: rotate(0deg);
+    }
+    50% {
+        width: 30px;
+        transform: rotate(360deg);
+    }
+	75% {
+		width: 30px;
+		transform: rotate(0);
+    }
+	100% {
+		width: 50px;
+	}
+}
+.animy{
+    animation: spin 1s ease-in-out .35s forwards infinite;
+    .anitop{
+        transform: translateY(-50%);
+        mix-blend-mode: plus-darker;
+        &.animid{
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+
+//Custom Styles
+a:hover{
+    @apply text-[#FE705B];
+}
+.ant-image {
+	display: block;
+}
+.ant-picker{
+    @apply border-2 border-[#DFE3E7] h-[44px] rounded-[9px] text-[14px] font-normal w-full text-[#000];
+}
+.ant-input{
+    @apply border-2 border-[#DFE3E7] h-[44px] rounded-[9px] text-[14px] font-normal w-full text-[#000] px-[15px];
+}
+.ant-input-affix-wrapper-lg {
+    @apply px-[15px];
+}
+.ant-btn{
+    &.checkout-btn{
+        @apply w-full rounded-[9px] text-[16px] font-[600] flex items-center justify-center;
+    }
+    &.signup-btn{
+        @apply text-white #{!important};
+    }
+    &:hover{
+        @apply no-underline;
+    }
+}
+.ant-btn-link:not(:disabled):not(.ant-btn-disabled):hover {
+	@apply text-[#FE705C];
+}
+.ant-input-affix-wrapper{
+    @apply border-2 border-[#DFE3E7] h-[44px] rounded-[9px] text-[14px] font-normal w-full text-[#000];
+    input.ant-input{
+        @apply h-auto;
+    }
+}
+.ant-btn-default:not(:disabled):not(.ant-btn-disabled):hover{
+    @apply text-inherit border-inherit;
+}
+
+.listub{
+    &:hover{
+        @apply scale-105;
+        box-shadow: 0 0 10px 1px rgba(211, 211, 211, 0.1);
+        .main__sponsored {
+            @apply text-[#ff715b];
+        }
+    }
+}
+.badlist{
+    @apply rotate-[-40];
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
+}
+.splist{
+    writing-mode: vertical-rl;
+}
+.ant-form-item {
+    .ant-form-item-label > label{
+        @apply text-[13px] text-slate-700  font-[600] mb-[3px];
+    }
+}
+.ant-form-item {
+    .ant-form-item-label > label{
+        &.ant-form-item-required{
+            &:not(.ant-form-item-required-mark-optional){
+                &::before {
+                    @apply absolute right-0;
+                }
+            }
+        }
+    }
+}
+.ant-form-vertical {
+    .ant-form-item-label{
+        @apply pb-0;
+    }
+}
+.ant-divider-horizontal{
+    &.ant-divider-with-text {
+        @apply mb-2 text-[14px] text-slate-500 px-2;
+        @apply mt-0 #{!important};
+    }
+}
+.ant-rate {
+	@apply text-[#FD6F5D];
+}
+.ant-tabs-nav {
+    .ant-tabs-nav-list{
+        @apply bg-white px-[8px] pt-3 md:rounded-full rounded-[15px] shadow-md mb-3;
+    }
+}
+.ant-tabs > .ant-tabs-nav .ant-tabs-nav-list, 
+.ant-tabs > div > .ant-tabs-nav .ant-tabs-nav-list {
+	@apply md:flex inline-block;
+}
+.ant-tabs > .ant-tabs-nav .ant-tabs-nav-wrap, 
+.ant-tabs > div > .ant-tabs-nav .ant-tabs-nav-wrap {
+	@apply whitespace-normal;
+}
+.ant-tabs {
+    .ant-tabs-tab + .ant-tabs-tab {
+        @apply mx-[5px];
+    }
+    .ant-tabs-tab{
+        @apply p-0 pb-3 mx-[5px];
+    }
+}
+.ant-tabs-top > .ant-tabs-nav{
+    @apply mb-3;
+    &::before{
+        @apply border-b-0;
+    }
+}
+.ant-tabs-nav {
+    .ant-tabs-ink-bar{
+        @apply hidden;
+    }
+}
+.ant-tabs > .ant-tabs-nav {
+    .ant-tabs-nav-operations{
+        @apply hidden;
+    }
+}
+.ant-tabs {
+    .ant-tabs-tab{
+        .ant-tabs-tab-btn {
+            .tabButton{
+                @apply py-2 px-4 bg-slate-200 text-slate-600 rounded-full text-[13px] font-[500] flex items-center justify-center gap-2;
+                span{
+                    @apply rounded-full flex items-center justify-center h-[18px] w-[18px] text-white bg-slate-500 text-[11px] font-[400];
+                }
+            }
+        }
+        &.ant-tabs-tab-active {
+            .ant-tabs-tab-btn {
+                .tabButton{
+                    @apply bg-[#0094FF]/[0.15] text-[#0094FF];
+                    span{
+                        @apply bg-[#0094FF];
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 899px) {
+    .mob-scr{
+        @apply block;
+        .mob-name{
+            @apply items-start justify-start;
+        }
+    }
+}

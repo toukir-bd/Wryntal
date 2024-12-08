@@ -1,0 +1,344 @@
+@import "../../styles/variables.scss";
+@import "../../styles/breakpoints.scss";
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  background-color: $color-background;
+}
+
+.wrapper {
+  display: flex;
+  width: $desktop;
+  align-items: center;
+  justify-content: space-between;
+  padding: $padding * 4 $padding * 2;
+}
+
+.core {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: $padding * 2;
+  align-items: center;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: $padding / 2;
+  text-align: center;
+}
+
+.content {
+  width: 800px;
+  display: flex;
+  background-color: white;
+  border-radius: $border-radius;
+  padding: $padding * 1.5;
+}
+
+.description {
+  font-size: 14px;
+  color: $color-dark;
+}
+
+.highlight {
+  font-weight: 500;
+  color: $color-primary;
+  text-decoration: underline;
+}
+
+.phone {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: $padding;
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: $padding * 2;
+
+    &_intro {
+      display: flex;
+      flex-direction: column;
+      gap: $padding / 2;
+      width: 350px;
+    }
+  }
+
+  &__sent {
+    display: flex;
+    flex-direction: column;
+    gap: $padding * 2;
+
+    &_back {
+      display: flex;
+      align-items: center;
+      gap: $padding / 1.5;
+      cursor: pointer;
+      color: $color-light;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+
+    &_intro {
+      display: flex;
+      flex-direction: column;
+      gap: $padding / 2;
+      width: 350px;
+    }
+
+    &_resend {
+      display: flex;
+      align-items: center;
+      gap: $padding / 2;
+
+      &_link {
+        color: $color-primary;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &__codes {
+    display: flex;
+    gap: $padding;
+    align-items: center;
+  }
+
+  &__code {
+    display: flex;
+    gap: $padding;
+    width: 300px;
+
+    &_character {
+      border-radius: $border-radius;
+      border: 1px solid $color-light;
+      font-size: 20px;
+
+      &_inactive {
+        background-color: $color-light-secondary;
+      }
+
+      &_selected {
+        border-color: $color-primary;
+        box-shadow: 0 0 0 2px rgba(229, 249, 255, 0.94);
+        outline: none;
+      }
+    }
+  }
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  gap: $padding * 2;
+  width: 100%;
+
+  &__intro {
+    display: flex;
+    flex-direction: column;
+    gap: $padding / 2;
+    width: 450px;
+  }
+
+  &__autocomplete {
+    display: flex;
+    gap: $padding;
+    flex-direction: column;
+
+    &_manual {
+      color: $color-primary;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+
+    &_group {
+      display: flex;
+      align-items: center;
+      gap: $padding * 1.5;
+      width: 100%;
+
+      & > * {
+        width: 100%;
+      }
+
+      @include media("<=tablet") {
+        flex-direction: column;
+        gap: 0;
+      }
+    }
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: $padding * 2;
+  width: 100%;
+
+  &__intro {
+    display: flex;
+    flex-direction: column;
+    gap: $padding / 2;
+    width: 450px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: $padding * 1.5;
+    align-items: flex-start;
+  }
+
+  &__input {
+    height: 44px !important;
+    color: rgba(0, 0, 0, 0.88) !important;
+    font-size: 14px !important;
+    line-height: 1.5714285714285714 !important;
+    list-style: none !important;
+    font-family: Inter !important;
+    position: relative !important;
+    display: inline-block !important;
+    width: 350px !important;
+    min-width: 0 !important;
+    background-color: #f4f6f8 !important;
+    background-image: none !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-color: #c5d0da !important;
+    border-radius: 8px !important;
+    transition: all 0.2s !important;
+    padding: 12px 18px 10.5px 18px !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    border-radius: 10px !important;
+  }
+}
+
+.id {
+  display: flex;
+  flex-direction: column;
+  gap: $padding * 2;
+  width: 100%;
+
+  &__intro {
+    display: flex;
+    flex-direction: column;
+    gap: $padding / 2;
+    width: 450px;
+  }
+
+  &__preview {
+    display: flex;
+    border: 1px dashed $color-light;
+    width: 300px;
+    height: 200px;
+    border-radius: $border-radius;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+
+    &_group {
+      display: flex;
+      align-items: center;
+      gap: $padding * 1.5;
+    }
+  }
+}
+
+.photo {
+  display: flex;
+  flex-direction: column;
+  gap: $padding * 2;
+  width: 100%;
+
+  &__intro {
+    display: flex;
+    flex-direction: column;
+    gap: $padding / 2;
+    width: 450px;
+  }
+
+  &__preview {
+    display: flex;
+    border: 1px dashed $color-light;
+    width: 150px;
+    height: 150px;
+    border-radius: $border-radius;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: $padding * 1.5;
+
+    &_user {
+      display: flex;
+      flex-direction: column;
+      gap: $padding / 4;
+
+      &_name {
+        display: flex;
+        gap: $padding / 2;
+        align-items: center;
+      }
+
+      &_verified {
+        color: $color-secondary;
+      }
+    }
+  }
+}
+
+.status {
+  display: flex;
+  width: 100%;
+  min-height: 200px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: $padding * 1.5;
+
+  &__core {
+    width: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: $padding / 2;
+  }
+}

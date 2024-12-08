@@ -1,0 +1,12 @@
+@import "../../../../styles/variables.scss";
+
+.map {
+  background-color: white;
+  padding: $padding / 2;
+  border-radius: $border-radius;
+  height: 220px;
+
+  & div {
+    border-radius: $border-radius / 2;
+  }
+}

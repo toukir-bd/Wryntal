@@ -1,0 +1,100 @@
+@import "../../styles/variables.scss";
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  background-color: $color-background;
+}
+
+.wrapper {
+  display: flex;
+  width: $desktop;
+  flex-direction: column;
+  padding: $padding * 4 $padding * 2;
+  gap: $padding * 2;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  background-color: white;
+  border-radius: $border-radius;
+  padding: $padding * 1.5;
+  flex-direction: column;
+  gap: $padding * 1.5;
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: $padding / 2;
+  }
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: $padding / 2;
+}
+
+.images {
+  display: flex;
+  align-items: center;
+  gap: $padding;
+
+  &__item {
+    border-radius: $border-radius;
+    overflow: hidden;
+  }
+}
+
+.groups {
+  display: flex;
+  gap: $padding * 1.5;
+
+  &__item {
+    flex: 1 1 50%;
+    border: 1px solid $color-light;
+    padding: $padding * 1.5;
+    border-radius: $border-radius * 1.5;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.form {
+  display: flex;
+
+  &__group {
+    display: flex;
+    align-items: center;
+    gap: $padding * 1.5;
+    width: 100%;
+
+    & > * {
+      width: 100%;
+    }
+  }
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+  gap: $padding / 2;
+
+  &__text {
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+.map {
+  border-radius: $border-radius;
+  width: 100%;
+  flex-grow: 1;
+
+  & div {
+    border-radius: $border-radius;
+  }
+}
